@@ -32,7 +32,7 @@ resource "yandex_vpc_network" "net" {
 
 resource "yandex_vpc_subnet" "subnet" {
   for_each       = local.zones
-  description    = "Subnet in the ${each.key} availability zones"
+  description    = "Subnet in the ${each.key} availability zone"
   name           = "bitrix-cache-subnet-${each.key}"
   network_id     = yandex_vpc_network.net.id
   zone           = each.key
