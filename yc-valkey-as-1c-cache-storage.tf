@@ -7,7 +7,7 @@
 
 locals {
   # The following settings are to be specified by the user. Change them as you wish.
-  valkey_password = "password" # Password of the user in Managed Service for Valkey cluster
+  valkey_password = "" # Password of the user in Managed Service for Valkey cluster
 
   # The following settings are predefined. Change them only if necessary.
 
@@ -126,9 +126,9 @@ resource "yandex_mdb_redis_cluster_v2" "valkey" {
   }
 
   resources = {
-    resource_preset_id = "hm3-c2-m8"
+    resource_preset_id = "hm3-c2-m8" # 2vCPU, 8 GB RAM
     disk_type_id       = "network-ssd"
-    disk_size          = 16
+    disk_size          = 16 # GB
   }
 
   hosts = {
@@ -152,7 +152,7 @@ resource "yandex_compute_instance" "bitrix" {
 
   resources {
     cores         = 2
-    memory        = 4
+    memory        = 4 # GB
     core_fraction = 20
   }
 
@@ -160,7 +160,7 @@ resource "yandex_compute_instance" "bitrix" {
     initialize_params {
       image_id = local.bitrix_image_id
       type     = "network-ssd"
-      size     = 24
+      size     = 24 # GB
     }
   }
 
