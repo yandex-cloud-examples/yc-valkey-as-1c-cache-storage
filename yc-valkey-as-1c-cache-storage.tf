@@ -1,7 +1,7 @@
 # Infrastructure for Yandex Managed Service for Valkey cluster and Bitrix VM
 #
-# RU: https://cloud.yandex.ru/docs/managed-valkey/tutorials/yc-valkey-as-1c-cache-storage
-# EN: https://cloud.yandex.com/en/docs/managed-valkey/tutorials/yc-valkey-as-1c-cache-storage
+# RU: https://yandex.cloud/ru/docs/managed-valkey/tutorials/yc-valkey-as-1c-cache-storage
+# EN: https://yandex.cloud/en/docs/managed-valkey/tutorials/yc-valkey-as-1c-cache-storage
 
 # Specify the following settings
 
